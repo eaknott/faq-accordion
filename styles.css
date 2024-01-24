@@ -1,0 +1,13 @@
+:root {
+    --lightPink: hsl(275, 100%, 97%);
+    --grayishPurple: hsl(292, 16%, 49%);
+    --darkPurple: hsl(292, 42%, 14%);
+}
+
+/* Mobile: 375px
+Desktop: 1440px
+
+Body paragraph font size: 16px
+font-family: Work Sans
+font-weights: 400, 600, 700 */
+
