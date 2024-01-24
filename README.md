@@ -51,6 +51,7 @@ Users should be able to:
 - One color was not provided, but I used Figma to find the color HSL
 - This time I coded with accessibility in mind from the beginning, and my workflow was much easier 
 - Selecting an element's child by simply coding "this.querySelector(".className")"
+- using forEach - remembering that this array method does not create a new array, it changes the existing array
 
 ### Continued development
 
