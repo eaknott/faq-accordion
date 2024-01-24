@@ -1,7 +1,19 @@
+@font-face {
+    font-family: "WorkSans";
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "WorkSansBold";
+    src: url(assets/fonts/static/WorkSans-Bold.ttf);
+}
+
+
 :root {
     --lightPink: hsl(275, 100%, 97%);
     --grayishPurple: hsl(292, 16%, 49%);
-    --darkPurple: hsl(292, 42%, 14%);
+    --darkPurple: hsl(292, 42%, 14%, 95%);
+    --brightPurple: hsl(281, 83%, 54%);
 }
 
 /* Mobile: 375px
@@ -11,3 +23,117 @@ Body paragraph font size: 16px
 font-family: Work Sans
 font-weights: 400, 600, 700 */
 
+body {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--lightPink);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "WorkSans";
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: var(--darkPurple);
+    font-family: "WorkSans";
+    font-weight: 700;
+}
+
+.header {
+    font-size: 3.2em;
+    font-family: "WorkSansBold";
+    padding: 10px;
+    margin: 0;
+}
+
+.questionBlock {
+    padding: 10px;
+}
+
+.blockTwo, .blockThree, .blockFour {
+    border-top: 0.5px solid lightgray;
+}
+
+.questionTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--darkPurple);
+    font-size: 12px;
+}
+
+.minusButton, .answer {
+    display: none;
+}
+
+.minusButton.active, .answer.active {
+    display: block;
+}
+
+.plusButton.active {
+    display: none;
+}
+
+.questionTitle:hover {
+    cursor: pointer;
+    color: var(--brightPurple);
+}
+
+.answer {
+    font-size: 16px;
+    color: var(--grayishPurple)
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 10px;
+    color: var(--darkPurple);
+    font-weight: 400;
+}
+
+.attribution a { 
+    color: var(--darkPurple); 
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--brightPurple)
+}
+
+@media (max-width: 600px) {
+    #container {
+        width: 275px;
+        padding: 15px;
+    }
+    #title {
+        align-items: center;
+    }
+    .header {
+        font-size: 2.5em;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 370px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+}
